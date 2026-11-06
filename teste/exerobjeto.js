@@ -26,6 +26,8 @@ const produtos = { id: 1, nome: "Mouse sem fio", categoria: "Periféricos", prec
         console.log("Produto Indisponivel")
     }
 
+    console.log(`Produto $produtos.estoque > 0 ? "disponivel" : "indisponivel`)
+
     console.log("-------EXERCÍCIO 2--------")
 
     let cliente = {
@@ -67,5 +69,15 @@ const produtos = { id: 1, nome: "Mouse sem fio", categoria: "Periféricos", prec
       ];
 
       console.log(produto[0].nome);
+      console.log("Preço do terceiro produto: " + produto[2].preco);
+      console.log("Quantidade de produtos: "+ produto.length)
+
+      produto.forEach((produto) => {
+        console.log(`${produto.id} - ${produto.nome} - ${produto.preco}`);
+      });
+
+      let acessorios = produto.filter(produto => produto.categoria ==="Acessórios")
+      console.log(acessorios)
+
 
 
